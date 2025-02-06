@@ -1,0 +1,11 @@
+// 1- onBoarding View => Introduction Screen Packdge to use 
+//Widget IntroductionScreen (pages[PageView]),
+
+//shared Prefrences => to save data onboarding 
+// Future<void> saveOnboarding ()async{}
+// init SharedPres =>  final prefs = await SharedPreferences.getInstance(); 
+//await prefs.setBool(AppRoutes.onBoarding, true);
+// وبعد كدا هستخدمها عندي في الفانكشن اللي بتعمل done navigate
+//main => final prefs  = await SharedPreferences.getInstance();  +
+// final bool? showOnBoarding = prefs.getBool(RoutesName.onBoarding);
+// WidgetsFlutterBinding.ensureInitialZed ();

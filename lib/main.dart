@@ -2,13 +2,16 @@ import 'package:aml/core/routes/app_routes.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
 
-void main() {
+void main()   {
+  WidgetsFlutterBinding.ensureInitialized();
   SystemChrome.setSystemUIOverlayStyle(SystemUiOverlayStyle.light);
   runApp(const AmlQuran());
 }
 
 class AmlQuran extends StatelessWidget {
-  const AmlQuran({super.key});
+  const AmlQuran({
+    super.key,
+  });
 
   @override
   Widget build(BuildContext context) {
