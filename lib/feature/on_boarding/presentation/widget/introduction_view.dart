@@ -58,7 +58,7 @@ class _IntroductionViewState extends State<IntroductionView> {
       onDone: () async {
         await saveOnboarding();
         // ignore: use_build_context_synchronously
-        context.pushReplacement(RoutesName.homeView);
+        context.pushReplacement(RoutesName.navigationView);
       },
       showBackButton: currentPage > 0, // !isFirstPage
       dotsFlex: 3,

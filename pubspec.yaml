@@ -29,6 +29,7 @@ flutter:
   assets:
     - assets/images/
     - assets/fonts/
+    - assets/icons/
   fonts:
     - family: Janna LT Bold
       fonts:

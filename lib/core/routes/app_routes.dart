@@ -1,4 +1,5 @@
 import 'package:aml/core/routes/routes_name.dart';
+import 'package:aml/core/widget/navigator_home.dart';
 import 'package:aml/feature/home/presentation/view/home_view.dart';
 import 'package:aml/feature/into_splash/presentation/view/splash_view.dart';
 import 'package:aml/feature/on_boarding/presentation/view/on_boarding_view.dart';
@@ -17,8 +18,12 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const OnBoardingView(),
     ),
     GoRoute(
+      path: RoutesName.navigationView,
+      builder: (context, state) => const NavigatorView(),
+    ),
+    GoRoute(
       path: RoutesName.homeView,
-      builder: (context, state) => const HomeView(),
+      builder: (context, state) =>   HomeView(),
     ),
   ],
   redirect: (context, state) async {
@@ -30,7 +35,7 @@ final GoRouter router = GoRouter(
     } else if (!showOnBoarding) {
       return RoutesName.onBoarding;
     } else {
-      return RoutesName.homeView;
+      return RoutesName.navigationView;
     }
   },
 );

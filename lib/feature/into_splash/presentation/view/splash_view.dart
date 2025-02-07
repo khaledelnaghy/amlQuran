@@ -1,5 +1,4 @@
 import 'dart:async';
-
 import 'package:aml/core/routes/routes_name.dart';
 import 'package:aml/core/utils/app_asset.dart';
 import 'package:flutter/material.dart';
@@ -22,7 +21,7 @@ class _SplashViewState extends State<SplashView> {
       if (showOnBoarding == null || !showOnBoarding) {
         context.go(RoutesName.onBoarding);
       } else {
-        context.go(RoutesName.homeView);
+        context.go(RoutesName.navigationView);
       }
     }
     await prefs.setBool(RoutesName.splash, true);
