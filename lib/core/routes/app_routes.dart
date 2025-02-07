@@ -7,15 +7,6 @@ import 'package:shared_preferences/shared_preferences.dart';
 
 final GoRouter router = GoRouter(
   initialLocation: RoutesName.splash,
-  redirect: (context, state) async {
-    final prefs = await SharedPreferences.getInstance();
-    final bool? showOnBoarding = prefs.getBool(RoutesName.onBoarding);
-    print("showOnBoarding: $showOnBoarding");
-    if (showOnBoarding == null || !showOnBoarding) {
-      return RoutesName.onBoarding;
-    }
-    return RoutesName.homeView;
-  },
   routes: [
     GoRoute(
       path: RoutesName.splash,
@@ -30,4 +21,16 @@ final GoRouter router = GoRouter(
       builder: (context, state) => const HomeView(),
     ),
   ],
+  redirect: (context, state) async {
+    final prefs = await SharedPreferences.getInstance();
+    final bool showOnBoarding = prefs.getBool(RoutesName.onBoarding) ?? false;
+    final bool hasSeenSplash = prefs.getBool(RoutesName.splash) ?? false;
+    if (!hasSeenSplash) {
+      return RoutesName.splash;
+    } else if (!showOnBoarding) {
+      return RoutesName.onBoarding;
+    } else {
+      return RoutesName.homeView;
+    }
+  },
 );
