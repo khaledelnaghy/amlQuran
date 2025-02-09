@@ -9,3 +9,7 @@
 //main => final prefs  = await SharedPreferences.getInstance();  +
 // final bool? showOnBoarding = prefs.getBool(RoutesName.onBoarding);
 // WidgetsFlutterBinding.ensureInitialZed ();
+
+// read files in assets => 1- create method void loadSura (){
+    // rootBundle.loadString (Path);
+}

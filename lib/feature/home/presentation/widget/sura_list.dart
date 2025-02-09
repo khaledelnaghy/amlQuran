@@ -1,23 +1,24 @@
 import 'package:aml/core/theme/app_colors.dart';
 import 'package:aml/core/utils/app_asset.dart';
 import 'package:aml/core/utils/app_style.dart';
+import 'package:aml/feature/home/data/model/response/sura_model.dart';
 import 'package:flutter/material.dart';
 import 'package:gap/gap.dart';
 
-class SuraList extends StatelessWidget {
-  const SuraList(
-      {super.key,
-      required this.index,
-      required this.ayaNumber,
-      required this.suraNameAr,
-      required this.suraNameEn});
-  final int index;
-  final String suraNameAr;
-  final String suraNameEn;
-  final String ayaNumber;
+class SuraList extends StatefulWidget {
+  const SuraList({
+    super.key,
+    required this.suraModel,
+  });
+  final SuraModel suraModel;
+
+  @override
+  State<SuraList> createState() => _SuraListState();
+}
+
+class _SuraListState extends State<SuraList> {
   @override
   Widget build(BuildContext context) {
-    double size =16;
     return Row(
       children: [
         Stack(
@@ -29,7 +30,7 @@ class SuraList extends StatelessWidget {
               width: 40,
             ),
             Text(
-              "$index",
+              "${widget.suraModel.index + 1}",
               style: AppStyle.s14.copyWith(color: AppColors.whiteColor),
             ),
           ],
@@ -37,18 +38,18 @@ class SuraList extends StatelessWidget {
         Gap(24),
         Expanded(
           child: Row(
-            mainAxisAlignment: MainAxisAlignment.spaceBetween,
+            // mainAxisAlignment: MainAxisAlignment.spaceBetween,
             children: [
               Column(
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   Text(
-                    suraNameEn,
+                    widget.suraModel.suraNameEn,
                     style: AppStyle.s16.copyWith(color: AppColors.whiteColor),
                   ),
                   Gap(5),
                   Text(
-                    "$ayaNumber Verses",
+                    "${widget.suraModel.numOfVerses} Verses",
                     style: AppStyle.s14.copyWith(color: AppColors.whiteColor),
                   ),
                 ],
@@ -57,7 +58,7 @@ class SuraList extends StatelessWidget {
           ),
         ),
         Text(
-          suraNameAr,
+          widget.suraModel.suraNameAr,
           style: AppStyle.s16.copyWith(color: AppColors.whiteColor),
         ),
       ],

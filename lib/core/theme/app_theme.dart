@@ -5,10 +5,20 @@ import 'package:flutter/material.dart';
 class AppTheme {
   static final ThemeData darkTheme = ThemeData(
     fontFamily: fontJannaLT,
+    appBarTheme: AppBarTheme(
+      centerTitle: true,
+      iconTheme: IconThemeData(
+        color: AppColors.primaryColor,
+      ),
+      backgroundColor: AppColors.blackColor,
+    ),
     inputDecorationTheme: InputDecorationTheme(
       // fillColor: AppColors.primaryColor,
       // filled: true,
-      hintStyle: TextStyle(color: AppColors.whiteColor ,  fontSize: 15,),
+      hintStyle: TextStyle(
+        color: AppColors.whiteColor,
+        fontSize: 15,
+      ),
       enabledBorder: OutlineInputBorder(
         borderRadius: BorderRadius.circular(15),
         borderSide: BorderSide(

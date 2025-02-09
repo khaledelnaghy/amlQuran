@@ -47,21 +47,11 @@ class _NavigatorViewState extends State<NavigatorView> {
           body: IndexedStack(
             index: selectItem,
             children: [
-              HomeView(
-                  // index: selectItem,
-                  ),
-              HadithView(
-                  // index: selectItem,
-                  ),
-              SebhaView(
-                  // index: selectItem,
-                  ),
-              RadioView(
-                  // index: selectItem,
-                  ),
-              TimeView(
-                  // index: selectItem,
-                  ),
+              HomeView(),
+              HadithView(),
+              SebhaView(),
+              RadioView(),
+              TimeView(),
             ],
           ),
 

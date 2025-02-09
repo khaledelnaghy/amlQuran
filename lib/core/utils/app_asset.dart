@@ -18,11 +18,15 @@ abstract class AppAsset {
   static const String iconhadeth = "$routePathIcons/icon_hadeth.png";
   static const String backgroundtime = "$routePathImages/background_time.png";
   static const String backgroundradio = "$routePathImages/background_radio.png";
-  static const String backgroundhadith = "$routePathImages/background_hadith.png";
+  static const String backgroundhadith = "$routePathImages/background_hadeth.png";
   static const String backgroungSeb7a = "$routePathImages/background_sebha.png";
   static const String backgrounghome = "$routePathImages/backgroung_home.png";
   static const String mostRecentaly = "$routePathImages/most_recentaly.png";
   static const String iconSearch = "$routePathIcons/icon_search.png";
   static const String vectorImage = "$routePathImages/vector_image.png";
+  static const String suradetailsbg = "$routePathImages/sura_details_bg.png";
+  static const String hadithbg = "$routePathImages/hadith_bg.png";
+ static const String backgroundhadithbg = "$routePathImages/HadithCardBackGround 1.png";
   
 }
+ 

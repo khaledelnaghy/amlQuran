@@ -9,11 +9,12 @@ environment:
 
 dependencies:
   animated_text_kit: ^4.2.3
+  carousel_slider: ^5.0.0
   cupertino_icons: ^1.0.8
   flutter:
     sdk: flutter
   gap: ^3.0.1
-  go_router: ^14.7.2
+  go_router: ^14.8.0
   introduction_screen: ^3.1.14
   shared_preferences: ^2.5.1
 
@@ -30,6 +31,8 @@ flutter:
     - assets/images/
     - assets/fonts/
     - assets/icons/
+    - assets/file/sura/
+    - assets/file/hadith/
   fonts:
     - family: Janna LT Bold
       fonts:
